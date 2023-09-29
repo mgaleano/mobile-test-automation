@@ -1,0 +1,8 @@
+Preconditions:
+Not logged in user with empty cart session.
+
+Steps:
+1. Open application
+3. Tap on Cart tab button
+
+Expected result: There should be a message stating the cart is empty
