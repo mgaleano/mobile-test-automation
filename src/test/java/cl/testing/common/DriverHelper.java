@@ -1,8 +1,10 @@
 package cl.testing.common;
 
 import io.appium.java_client.AppiumDriver;
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.net.MalformedURLException;
@@ -27,6 +29,9 @@ public class DriverHelper {
                 return appiumDriver;
             case "IOS":
                 // setup iOS
+            case "WEB":
+                WebDriverManager.chromedriver().setup();
+                return new ChromeDriver();
             default:
                 Logger.getGlobal().log(Level.SEVERE, "Unsupported platform. Use ANDROID or IOS.");
         }

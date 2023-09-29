@@ -12,6 +12,7 @@ public class HomePage extends BasePage {
     }
 
     @AndroidFindBy(id = "com.amazon.mShop.android.shopping:id/cart_count")
+    @FindBy(css = "a#nav-cart")
     protected WebElement cartBtn;
 
     public CartPage clickOnCartButton() {

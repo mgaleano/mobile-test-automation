@@ -23,7 +23,7 @@ public class BasePage {
 
     public BasePage(WebDriver driver) {
         this.driver = driver;
-        if (((AppiumDriver) driver).isBrowser()) {
+        if (true) {
             PageFactory.initElements(driver, this);
         } else {
             PageFactory.initElements(new AppiumFieldDecorator(driver, ofSeconds(5)), this);
